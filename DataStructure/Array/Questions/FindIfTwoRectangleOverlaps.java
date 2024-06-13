@@ -11,7 +11,7 @@ public class FindIfTwoRectangleOverlaps {
         for (int i = 0; i < 4; i++) {
             a1[i] = sc.nextInt();
         }
-        System.out.println("Enter the  Element in the First Array: ");
+        System.out.println("Enter the  Element in the Second Array: ");
         for (int i = 0; i < 4; i++) {
             a2[i] = sc.nextInt();
         }
