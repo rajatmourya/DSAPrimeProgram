@@ -4,9 +4,15 @@ import java.util.*;
 
 public class FindPairsWhoseSumIsPresentInArray {
     public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter the Number of Element in the Array: ");
-        int[] arr = {1, 9, 10, 8, 2, 2, 10, 7, 9, 1};
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number of Element in the Array: ");
+        int n = sc.nextInt();
+//        int[] arr = {1, 9, 10, 8, 2, 2, 10, 7, 9, 1};
+        int arr[] = new int[n];
+        System.out.println("Enter the Element of the Array: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
         List<List<Integer>> ans = findPair(arr);
         for(List<Integer> e: ans){
             for(Integer i: e){
