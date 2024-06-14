@@ -12,9 +12,10 @@ public class LongestCommonPrefix {
 //        for (int i = 0; i < 4; i++) {
 //            arr[i] = sc.nextLine();
 //        }
-        String[] arr = {"hello","heskel","help"};
+//        String[] arr = {"hello","heskel","help"};
 //        String[] arr = {"prime","protect","promo"};
 //        String[] arr = {"abcde","abcd", "abc", "ab", "a"};
+        String[] arr = {"cir","car"};
         System.out.println(longestCommonPrefix(arr));
     }
     public static String longestCommonPrefix(String[] strs) {
@@ -26,6 +27,8 @@ public class LongestCommonPrefix {
             for (int j = 0; j < minIndex; j++) {
                 if(temp.charAt(j) == (ans.charAt(j))) {
                     a = a + ans.charAt(j);
+                }else {
+                    break;
                 }
             }
             ans = a;
