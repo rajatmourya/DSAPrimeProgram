@@ -17,7 +17,10 @@ public class LernLinkedList {
 
         LinkedListDisplay.printLinkedList(head);
 
+        LinkedListInsertion.insertInLinkedList(4,24, head);
+        LinkedListInsertion.insertInLinkedList(5,27, head);
 
+        LinkedListDisplay.printLinkedList(head);
     }
 
 
