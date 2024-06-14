@@ -1,4 +1,4 @@
-package DataStructure.Array.LimkedList;
+package DataStructure.LinkedList;
 
 public class LinkedListDisplay {
     public static void printLinkedList(Node<Integer> head){

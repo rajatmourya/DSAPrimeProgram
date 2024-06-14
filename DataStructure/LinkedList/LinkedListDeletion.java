@@ -1,4 +1,4 @@
-package DataStructure.Array.LimkedList;
+package DataStructure.LinkedList;
 
 public class LinkedListDeletion {
     public static Node<Integer> deletionInLinkedList(int pos, Node head){

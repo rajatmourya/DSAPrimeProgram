@@ -1,4 +1,4 @@
-package DataStructure.Array.LimkedList;
+package DataStructure.LinkedList;
 
 public class LernLinkedList {
     public static void main(String[] args) {

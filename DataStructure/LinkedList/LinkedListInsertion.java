@@ -1,4 +1,4 @@
-package DataStructure.Array.LimkedList;
+package DataStructure.LinkedList;
 
 public class LinkedListInsertion {
     public static Node<Integer> insertInLinkedList(int pos, int data, Node<Integer> head){
