@@ -1,11 +1,11 @@
 package DataStructure.Stack;
 
 public class StackUsingArray {
-    int arr[];
+    private int arr[];
 
-    int size;
+    private int size;
 
-    int top;
+    private int top;
 
     public StackUsingArray(int size) {
         this.size = size;

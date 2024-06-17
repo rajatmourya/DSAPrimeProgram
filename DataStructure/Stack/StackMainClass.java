@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class StackMainClass {
     public static void main(String[] args) {
+
+//        callTOStackUsingArray();
+        callTOStackUsingLinkedList();
+
+    }
+
+    public static void callTOStackUsingArray(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of Stack");
         StackUsingArray stack = new StackUsingArray(sc.nextInt());
@@ -41,5 +48,16 @@ public class StackMainClass {
                 ch = 'N';
             }
         }while (ch == 'Y');
+    }
+
+    public static void callTOStackUsingLinkedList(){
+        StackUsingLinkedList stack = new StackUsingLinkedList();
+        System.out.println(stack.isEmptry());
+
+        stack.push(24);
+        stack.push(27);
+        stack.push(2427492);
+        System.out.println(stack.peek());
+
     }
 }
