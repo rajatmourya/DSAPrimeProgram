@@ -6,7 +6,7 @@ public class StackMainClass {
     public static void main(String[] args) {
 
 //        callTOStackUsingArray();
-        callTOStackUsingLinkedList();
+        callTOStackUsingLinkedList();k
 
     }
 
