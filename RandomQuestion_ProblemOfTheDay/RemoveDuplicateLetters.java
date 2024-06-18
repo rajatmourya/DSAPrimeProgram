@@ -23,6 +23,7 @@ class Solution {
     public String removeDuplicateLetters(String s) {
         int size = s.length();
         String ans = "";
+        StackUsingArray stack = new StackUsingArray(size);
 
         return ans;
 

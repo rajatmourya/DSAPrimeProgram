@@ -3,7 +3,7 @@ package BinarySearch;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class FirstOccurrenceOfAnElementInASortedArray {
+public class LastOccurrenceOfAnElementInASortedArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Number of Element in the Array: ");
@@ -17,14 +17,14 @@ public class FirstOccurrenceOfAnElementInASortedArray {
         int k = sc.nextInt();
 
 //        int a[] = {5,5,5,8,9,9,15,16};
-//        int k = 9;
+//        int k = 5;
 
 
         Arrays.sort(a);
-        System.out.println(firstOccurrenceOfAnEISA(a,k));
-
+        System.out.println(lastOccurrenceOfAnEISA(a, k));
     }
-    static int firstOccurrenceOfAnEISA(int[] a, int k){
+
+    static int lastOccurrenceOfAnEISA(int[] a, int k){
         int l = 0, r = a.length-1;
         int ans = -1;
         while (l <= r){
@@ -35,7 +35,7 @@ public class FirstOccurrenceOfAnElementInASortedArray {
                 l = m + 1;
             }else {
                 ans = m;
-                r = m - 1;
+                l = m + 1;
             }
         }
 
