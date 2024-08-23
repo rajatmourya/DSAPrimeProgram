@@ -14,10 +14,25 @@ public class ReverseLinkedList {
 
         PrintLinkedList.printList(head);
         Node newHead = reverseLinkedList(head);
+        System.out.println("Reverse Linked List:");
         PrintLinkedList.printList(newHead);
+        Node newHeadRecursively = reverseLinkedListRecursively(head);
+        System.out.println("Recursively Reverse Linked List:");
+        PrintLinkedList.printList(newHeadRecursively);
 
 
     }
+
+    private static Node reverseLinkedListRecursively(Node head) {
+        if(head == null || head.next ==null) return head;
+
+        Node headOfSubProblem = reverseLinkedListRecursively(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return headOfSubProblem;
+    }
+
     public static Node reverseLinkedList(Node head){
         if(head == null || head.next == null) return head;
         Node prev = head;
