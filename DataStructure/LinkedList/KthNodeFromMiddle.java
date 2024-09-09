@@ -2,39 +2,44 @@ package DataStructure.LinkedList;
 
 public class KthNodeFromMiddle {
     public static void main(String[] args) {
-        Node head = new Node(1);
-        Node n2 = new Node(3);
-        Node n3 = new Node(5);
-        Node n4 = new Node(7);
-        Node n5 = new Node(9);
-        Node n6 = new Node(8);
-        Node n7 = new Node(6);
-        Node n8 = new Node(4);
-        Node n9 = new Node(2);
-        Node n10 = new Node(0);
+        ListNode head = new ListNode(1);
+        ListNode n2 = new ListNode(3);
+        ListNode n3 = new ListNode(5);
+        ListNode n4 = new ListNode(7);
+        ListNode n5 = new ListNode(9);
+        ListNode n6 = new ListNode(8);
+        ListNode n7 = new ListNode(6);
+        ListNode n8 = new ListNode(4);
+        ListNode n9 = new ListNode(2);
+        ListNode n10 = new ListNode(0);
 
         head.next = n2; n2.next = n3; n3.next = n4;  n4.next = n5; n5.next = n6; n6.next = n7; n7.next = n8;
         n8.next = n9; n9.next = n10;
-        int B = 3;
+        int B = 100000000;
 
         PrintLinkedList.printList(head);
-        System.out.println(kthNode(head,B));
+        System.out.println(kthListNode(head,B));
 
     }
 
-    public static int kthNode(Node head, int B) {
-        Node newHead = reversedLinkedList(head);
-        PrintLinkedList.printList(newHead);
-        Node middle = findMiddle(newHead
-        );
+    public static int kthListNode(ListNode head, int B) {
+        ListNode middle = findMiddle(head);
+        reversedLinkedList(head);
+        PrintLinkedList.printList(middle);
         if(B == 0){
-            return (int) middle.val;
+            return middle.val;
+        }else if ( B < 0){
+            return -1;
         }
         int i = 1;
         while (i <= B){
+
             if(i == B){
                 middle = middle.next;
-                return (int)middle.val;
+                return middle.val;
+            }
+            if(middle.next == null){
+                return -1;
             }
             middle = middle.next;
             i += 1;
@@ -42,22 +47,22 @@ public class KthNodeFromMiddle {
         return -1;
     }
 
-    public static Node findMiddle(Node head){
-        Node fast = head;
-        Node slow = head;
+    public static ListNode findMiddle(ListNode head){
+        ListNode fast = head;
+        ListNode slow = head;
         while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
         }
         return slow;
     }
-    public static Node reversedLinkedList(Node head){
+    public static ListNode reversedLinkedList(ListNode head){
         if(head == null || head.next == null) return  head;
-        Node prev = head;
-        Node curr = head.next;
+        ListNode prev = head;
+        ListNode curr = head.next;
         head.next = null;
         while (curr != null){
-            Node next = curr.next;
+            ListNode next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
